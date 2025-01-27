@@ -1,0 +1,1 @@
+These are my notes on **Clean Architecture: A Craftsman's Guide to Software Structure and Design"** by Robert C. Martin.
