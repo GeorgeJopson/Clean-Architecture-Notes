@@ -1,0 +1,5 @@
+# Chapter 4 - Structured Programming
+
+- **Structured Programming:** The paradigm that we should not use unrestricted transfers of control (like goto) but instead simple selection/iteration structures like if/then/else and do/while.
+- Constructs like "goto" make a program increasingly hard to test and build, as you can't break the program down into small testable units. However by restricting ourselves to not using unrestricted direct transfer of control, we can break our program down into functional units (which can then be easily individually proved).
+- To check that software works we use tests to try to prove it doesn't work. If we can't prove our software to be broken after enough effort, then we simply assume it to be working. Using structured programming helps create these components which can be easily tested in isolation.
