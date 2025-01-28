@@ -1,0 +1,7 @@
+# Chapter 6 - Functional Programming
+
+- Functional programming states that data should be immutable (meaning you can't reassign the value of variables). This helps because all race conditions, deadlock conditions, concurrent update problems, and a whole host of other bugs are due to mutable variables. You can't have a race condition if no variable is every updated.
+- With infinite storage and processor speed we could implement total immutability. However given we lack this, trade offs have to be made.
+- You can split your system into mutating and immutable parts. The immutable components perform tasks in a purely functional way, and do not have any mutable variables. The mutable components can have mutable variables which may be protected with some kind of transaction/retry scheme.
+- By moving as much code as possible out of mutating components to immutable components, you make life easier for yourself.
+- An example of immutability is event sourcing. Instead of storing the data, you simply store all of the operations on it. Then by applying all those operations you can get the current value. If it requires too much storage/computation to do this then you can sum up the operations and save them at regular intervals. This means you only need to store transactions since the last interval.
